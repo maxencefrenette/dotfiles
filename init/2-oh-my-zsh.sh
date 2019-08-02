@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$ZSH" ]
-then
+if [ -d "$ZSH" ]; then
     exit 0
 fi
 
