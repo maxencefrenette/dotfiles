@@ -7,10 +7,12 @@ ZSH_THEME="fishy"
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-HIST_STAMPS="mm/dd/yyyy"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
 ### User Configuration
 export EDITOR='vim'
+
+# Yarn
+export PATH="$PATH:`yarn global bin`"
