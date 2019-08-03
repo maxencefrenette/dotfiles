@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 yarn_packages=(
+    npm-check-updates
     npx
     serve
 )
