@@ -6,6 +6,7 @@ apt_packages=(
     figlet
     git
     nodejs
+    xsel
     yarn
     zsh
 )
