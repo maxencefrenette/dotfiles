@@ -2,6 +2,7 @@
 
 yarn_packages=(
     npx
+    serve
 )
 
 for package in "${yarn_packages[@]}"
