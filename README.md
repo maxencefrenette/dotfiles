@@ -3,9 +3,9 @@
 They are designed to be used with the latest Ubuntu version running in WSL 2.
 
 ## Installation
-```
-./install.sh
-```
+* `git clone git@github.com:maxencefrenette/dotfiles.git`
+* `./dotfiles/install.sh`
+* Configure ssh keys manually
 
 ## Inspiration
 * [awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
