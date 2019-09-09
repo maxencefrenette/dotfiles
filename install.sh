@@ -8,6 +8,7 @@ sudo echo
 # git pull origin master
 
 $DOTFILES/init/1-apt.sh
+$DOTFILES/init/1-settings.sh
 $DOTFILES/init/2-oh-my-zsh.sh
 $DOTFILES/init/2-rust.sh
 $DOTFILES/init/2-yarn.sh
