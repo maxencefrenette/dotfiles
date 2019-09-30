@@ -15,4 +15,4 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 # Yarn
-export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:`yarn global bin`:$HOME/.cargo/bin"
