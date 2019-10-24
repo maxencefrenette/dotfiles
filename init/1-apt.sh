@@ -5,6 +5,8 @@ apt_packages=(
     cloc
     figlet
     git
+    imagemagick
+    lftp
     nodejs
     xsel
     yarn
