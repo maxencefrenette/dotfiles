@@ -4,6 +4,7 @@
 $packages = @(
     # Browsers
     "googlechrome"
+    "microsoft-edge"
     "firefox"
     "opera"
 
@@ -16,10 +17,19 @@ $packages = @(
     "vscode"
     "nodejs"
     "yarn"
+    "cloc"
+    # "sql-server-management-studio"
 
     # Tools
     "7zip"
     "greenshot"
+    "adobereader"
+    "gimp"
+    "treesizefree"
+
+    # Gaming
+    # "steam"
+    # "leagueoflegends"
 )
 
 choco upgrade @packages --yes --limit-output
