@@ -7,11 +7,11 @@ DOTFILES="$HOME/dotfiles"
 sudo echo
 # git pull origin master
 
-$DOTFILES/init/1-apt.sh
-$DOTFILES/init/1-settings.sh
-$DOTFILES/init/2-oh-my-zsh.sh
-$DOTFILES/init/2-rust.sh
-$DOTFILES/init/2-yarn.sh
+$DOTFILES/linux/init/1-apt.sh
+$DOTFILES/linux/init/1-settings.sh
+$DOTFILES/linux/init/2-oh-my-zsh.sh
+$DOTFILES/linux/init/2-rust.sh
+$DOTFILES/linux/init/2-yarn.sh
 
 ### Link files
 linked_files=(
@@ -21,7 +21,7 @@ linked_files=(
 
 for file in "${linked_files[@]}"
 do
-    source="$DOTFILES/link/$file"
+    source="$DOTFILES/linux/link/$file"
     dest="$HOME/$file"
 
     # Delete file if it already exists
