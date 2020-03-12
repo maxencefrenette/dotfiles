@@ -1,6 +1,10 @@
 # TODO: check if running as administrator
 # TODO: installl chocolatey if not installed
 
+### Define variables ###
+$dotfiles = "$($home)\Repos\dotfiles"
+
+### Install Packages ###
 $packages = @(
     # Browsers
     "googlechrome"
@@ -34,4 +38,5 @@ $packages = @(
 
 choco upgrade @packages --yes --limit-output
 
-# TODO: use same git settings as on Linux
+### Copy setting files ###
+Copy-Item -Path $dotfiles\shared\.gitconfig -Destination $home\.gitconfig

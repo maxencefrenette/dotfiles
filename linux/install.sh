@@ -16,8 +16,13 @@ $DOTFILES/linux/init/2-yarn.sh
 ### Link files
 linked_files=(
     .zshrc
+)
+
+shared_linked_files=(
     .gitconfig
 )
+
+# TODO: link shared linked files as well. Make a function to link files and call it from 2 loops
 
 for file in "${linked_files[@]}"
 do
