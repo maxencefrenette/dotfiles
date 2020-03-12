@@ -16,12 +16,15 @@ $packages = @(
     "spotify"
     "vlc"
 
-    # Dev
+    # Dev (General)
     "git"
     "vscode"
+    "hackfont"
+    "cloc"
+
+    # Languages & Tools
     "nodejs"
     "yarn"
-    "cloc"
     "dotnetcore-sdk"
     # "sql-server-management-studio"
 
