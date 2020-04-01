@@ -20,6 +20,8 @@ linked_files=(
 
 shared_linked_files=(
     .gitconfig
+    .personal-email.gitconfig
+    .work-email.gitconfig
 )
 
 # TODO: link shared linked files as well. Make a function to link files and call it from 2 loops

@@ -1,6 +1,11 @@
 [user]                                                                                                                                    
     name = Maxence Frenette
-    email = maxence.frenette@gmail.com
+
+[includeIf "gitdir:~/Repos/"]
+	path = .personal-email.gitconfig
+
+[includeIf "gitdir:/git/"]
+	path = .work-email.gitconfig
 
 [alias]
 	co = checkout

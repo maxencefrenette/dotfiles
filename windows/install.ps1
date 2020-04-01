@@ -44,4 +44,9 @@ $packages = @(
 choco upgrade @packages --yes --limit-output
 
 ### Copy setting files ###
+Write-Output $dotfiles
+# TODO: auto-detect files to be linked
+# TODO: loop instead of repeating this
 Copy-Item -Path $dotfiles\shared\.gitconfig -Destination $home\.gitconfig
+Copy-Item -Path $dotfiles\shared\.personal-email.gitconfig -Destination $home\.personal-email.gitconfig
+Copy-Item -Path $dotfiles\shared\.work-email.gitconfig -Destination $home\.work-email.gitconfig
