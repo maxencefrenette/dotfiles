@@ -26,6 +26,7 @@ $packages = @(
     "nodejs"
     "yarn"
     "dotnetcore-sdk"
+    "python"
     # "sql-server-management-studio"
 
     # Tools
