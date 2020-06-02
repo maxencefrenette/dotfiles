@@ -1,2 +1,5 @@
+* Install chocolatey
+* Install git
+* Clone in `~\Repos\dotfiles`
 * `Set-ExecutionPolicy Unrestricted`
-* `.\install.ps1`
+* Run `windows\install.ps1`
