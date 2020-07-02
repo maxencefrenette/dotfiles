@@ -35,6 +35,7 @@ $packages = @(
     "adobereader"
     "gimp"
     "treesizefree"
+    "notion"
     
     # Gaming
     # "discord"
