@@ -18,7 +18,7 @@ $packages = @(
 
     # Dev (General)
     "git"
-    "vscode"
+    "vscode-insiders"
     "hackfont"
     "cloc"
 
