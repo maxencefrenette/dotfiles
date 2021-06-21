@@ -4,7 +4,7 @@
 [includeIf "gitdir:~/Repos/"]
 	path = .personal-email.gitconfig
 
-[includeIf "gitdir:/git/"]
+[includeIf "gitdir:C:/git/"]
 	path = .work-email.gitconfig
 
 [alias]
