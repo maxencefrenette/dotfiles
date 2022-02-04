@@ -7,9 +7,7 @@ apt_packages=(
     git
     imagemagick
     lftp
-    nodejs
     xsel
-    yarn
     zsh
 )
 

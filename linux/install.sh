@@ -38,3 +38,16 @@ do
 
     ln -sv "$source" "$dest"
 done
+
+for file in "${shared_linked_files[@]}"
+do
+    source="$DOTFILES/shared/$file"
+    dest="$HOME/$file"
+
+    # Delete file if it already exists
+    if [[ -e "$dest" ]]; then
+        rm "$dest"
+    fi
+
+    ln -sv "$source" "$dest"
+done

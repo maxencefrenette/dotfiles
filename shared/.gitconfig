@@ -1,11 +1,21 @@
 [user]                                                                                                                                    
     name = Maxence Frenette
 
+# Personal Email
 [includeIf "gitdir:~/Repos/"]
 	path = .personal-email.gitconfig
+[includeIf "gitdir:~/repos/"]
+	path = .personal-email.gitconfig
+[includeIf "gitdir:~/dotfiles/"]
+	path = .personal-email.gitconfig
 
+
+# Work Email
 [includeIf "gitdir:C:/git/"]
 	path = .work-email.gitconfig
+[includeIf "gitdir:~/microsoft/"]
+	path = .work-email.gitconfig
+
 
 [alias]
 	co = checkout
