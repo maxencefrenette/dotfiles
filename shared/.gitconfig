@@ -20,8 +20,12 @@
 [alias]
 	co = checkout
 	ci = commit
+	cam = commit -am
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
+	branch-name = "!git rev-parse --abbrev-ref HEAD"
+	pushb = "!git push origin $(git branch-name)"
+	pullb = "!git pull origin $(git branch-name)"
