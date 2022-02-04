@@ -17,3 +17,8 @@ cd dotfiles
 
 -   [awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
 -   [Cowboy's dotfiles](https://github.com/cowboy/dotfiles)
+
+## TODO
+
+* Autoinstall nvm
+    * Install default global packages https://stackoverflow.com/questions/52174381/yarn-not-installing-in-nvm-version-node-version
