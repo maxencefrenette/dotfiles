@@ -1,5 +1,5 @@
 ### Oh-my-zsh Configuration
-export ZSH="/home/maxence/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="fishy"
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
