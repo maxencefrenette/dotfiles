@@ -24,9 +24,10 @@ unlink:
 ###############################################################################
 # Linux                                                                       #
 ###############################################################################
-.PHONY: linux
+.PHONY: linux linux-install linux-zsh linux-rust
+.SILENT: linux-zsh
 
-APT_PACKAGES := build-essential cloc figlet git zsh
+APT_PACKAGES := build-essential cloc figlet git zsh fzf
 
 linux: link linux-install linux-zsh
 
@@ -38,16 +39,14 @@ linux-install:
 	sudo apt autoremove --yes
 
 linux-zsh:
-	if [ -d "$ZSH" ]; then
-		exit 0
+	if ! [ -d "$$ZSH" ]; then \
+		sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended; \
+		sudo chsh -s $$(which zsh) maxence; \
 	fi
-
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
-	sudo chsh -s $(which zsh) maxence
 
 linux-rust:
 	curl https://sh.rustup.rs -sSf | sh -s -- -y
-	export PATH="$PATH:$HOME/.cargo/bin"
+	export PATH="$$PATH:$$HOME/.cargo/bin"
 
 	rustup install stable
 	rustup install nightly
