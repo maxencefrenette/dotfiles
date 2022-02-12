@@ -1,26 +1,59 @@
-REPO             := $(HOME)/Repos/dotfiles
-CONFIG_FILES     := $(shell ls -A $(REPO)/config)
-CONFIG_FILE_DEST := $(addprefix $(HOME)/,$(CONFIG_FILES))
-
+REPO := $(HOME)/dotfiles
 
 ###############################################################################
 # Linking                                                                     #
 ###############################################################################
+CONFIG_FILES     := $(shell ls -A $(REPO)/config)
+CONFIG_FILE_DEST := $(addprefix $(HOME)/,$(CONFIG_FILES))
+
 .PHONY: link unlink
+.SILENT: $(CONFIG_FILE_DEST)
 
 link: $(CONFIG_FILE_DEST)
 
 $(CONFIG_FILE_DEST):
+	if [ -e $@ ]; then rm -v $@; fi
 	ln -sv "$(REPO)/config/$(notdir $@)" $@
 
 # Broken on Windows
 unlink:
 	@echo "Unlinking dotfiles"
-	@for f in $(CONFIG_FILE_DEST); do if [ -h $$f ]; then rm -i $$f; fi ; done
+	@for f in $(CONFIG_FILE_DEST); do if [ -h $$f ]; then rm -v $$f; fi ; done
 
 
 ###############################################################################
-# Windows  																      #
+# Linux                                                                       #
+###############################################################################
+.PHONY: linux
+
+APT_PACKAGES := build-essential cloc figlet git zsh
+
+linux: link linux-install linux-zsh
+
+linux-install:
+	sudo apt update
+	sudo apt install --yes $(APT_PACKAGES)
+	sudo apt upgrade --yes
+	sudo apt autoclean --yes
+	sudo apt autoremove --yes
+
+linux-zsh:
+	if [ -d "$ZSH" ]; then
+		exit 0
+	fi
+
+	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended
+	sudo chsh -s $(which zsh) maxence
+
+linux-rust:
+	curl https://sh.rustup.rs -sSf | sh -s -- -y
+	export PATH="$PATH:$HOME/.cargo/bin"
+
+	rustup install stable
+	rustup install nightly
+
+###############################################################################
+# Windows                                                                     #
 ###############################################################################
 .PHONY: windows windows-install
 
