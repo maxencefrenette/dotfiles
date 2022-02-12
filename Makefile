@@ -13,7 +13,7 @@ link: $(CONFIG_FILE_DEST)
 
 $(CONFIG_FILE_DEST):
 	if [ -e $@ ]; then rm -v $@; fi
-	ln -sv "$(REPO)/config/$(notdir $@)" $@
+	ln -sv "$(REPO)/config/$(notdir $@)" "$@"
 
 # Broken on Windows
 unlink:
