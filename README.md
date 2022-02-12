@@ -26,4 +26,4 @@ make linux
 
 -   [awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
 -   [Cowboy's dotfiles](https://github.com/cowboy/dotfiles)
--   [Makeifle for your dotfiles](https://polothy.github.io/post/2018-10-09-makefile-dotfiles/)
+-   [Makefile for your dotfiles](https://polothy.github.io/post/2018-10-09-makefile-dotfiles/)
