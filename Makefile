@@ -29,7 +29,7 @@ unlink:
 
 APT_PACKAGES := build-essential cloc figlet git zsh fzf
 
-linux: link linux-install linux-zsh
+linux: linux-install linux-zsh link
 
 linux-install:
 	sudo apt update
