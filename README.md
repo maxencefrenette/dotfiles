@@ -13,9 +13,18 @@ I have dotfiles for both windows and linux. View the appropriate directory for d
 
 ### Linux
 
--   Configure ssh keys manually
+-   Generate ssh keys
 
 ```bash
+ssh-keygen
+cat .ssh/id_rsa.pub | clip.exe
+```
+
+- Paste public key in github
+- Clone repo and 
+
+```bash
+sudo apt install -y make
 cd ~
 git clone git@github.com:maxencefrenette/dotfiles.git
 cd dotfiles
