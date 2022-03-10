@@ -68,6 +68,7 @@ CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree notion
 # "dotnetcore-sdk"
 # "python"
 # "sql-server-management-studio"
+# docker-desktop
     
 # Gaming
 # "discord"
