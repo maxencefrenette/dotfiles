@@ -24,4 +24,4 @@
 	st = status
 	br = branch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-	pushb = "git push -u origin HEAD"
+	pushb = push -u origin HEAD
