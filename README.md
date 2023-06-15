@@ -21,7 +21,7 @@ cat .ssh/id_rsa.pub | clip.exe
 ```
 
 - Paste public key in github
-- Clone repo and 
+- Clone repo
 
 ```bash
 sudo apt install -y make
