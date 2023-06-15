@@ -8,7 +8,7 @@ I have dotfiles for both windows and linux. View the appropriate directory for d
 
 -   Install chocolatey
 -   `choco install git make gsudo`
--   Clone in `~\Repos\dotfiles`
+-   Clone in `~\dotfiles`
 -   `make windows` (needs to be run in git bash)
 
 ### Linux
