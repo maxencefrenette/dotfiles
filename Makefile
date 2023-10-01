@@ -71,9 +71,7 @@ CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree notion
 # docker-desktop
     
 # Gaming
-# "discord"
-# "steam"
-# "leagueoflegends"
+# CHOCO_PACKAGES += discord steam leagueoflegends
 
 windows: link windows-install
 
