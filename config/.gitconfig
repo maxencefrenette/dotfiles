@@ -11,8 +11,6 @@
 
 
 # Work Email
-[includeIf "gitdir:C:/git/"]
-	path = .work-email.gitconfig
 [includeIf "gitdir:~/Repos-Dandelion/"]
 	path = .work-email.gitconfig
 
