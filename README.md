@@ -11,6 +11,21 @@ I have dotfiles for both windows and linux. View the appropriate directory for d
 -   Clone in `~\dotfiles`
 -   `make windows` (needs to be run in git bash)
 
+### Mac OS
+
+   Generate ssh keys
+
+```bash
+ssh-keygen
+cat .ssh/id_rsa.pub | clip.exe
+```
+
+- Paste public key in github
+- Install Xcode (to get git and make)
+- Clone repo
+- `make link`
+- TODO: install brew and brew packages
+
 ### Linux
 
 -   Generate ssh keys
