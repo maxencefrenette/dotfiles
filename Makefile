@@ -59,7 +59,7 @@ linux-rust:
 CHOCO_PACKAGES := googlechrome firefox opera
 CHOCO_PACKAGES += spotify vlc  notion
 CHOCO_PACKAGES += git vscode hackfont cloc make gsudo microsoft-windows-terminal tortoisegit
-CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree windirstats notepadplusplus
+CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree windirstat notepadplusplus
 CHOCO_PACKAGES += nodejs yarn # webdev
 CHOCO_PACKAGES += python # python
 
