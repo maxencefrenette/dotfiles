@@ -56,28 +56,29 @@ linux-rust:
 ###############################################################################
 .PHONY: windows windows-install
 
-CHOCO_PACKAGES := googlechrome microsoft-edge firefox opera
-CHOCO_PACKAGES += spotify vlc
-CHOCO_PACKAGES += git vscode hackfont cloc make gsudo
-CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree notion
+CHOCO_PACKAGES := googlechrome firefox opera
+CHOCO_PACKAGES += spotify vlc  notion
+CHOCO_PACKAGES += git vscode hackfont cloc make gsudo microsoft-windows-terminal
+CHOCO_PACKAGES += 7zip greenshot adobereader gimp treesizefree windirstats notepadplusplus
+CHOCO_PACKAGES += nodejs yarn # webdev
+CHOCO_PACKAGES += python # python
 
 # TODO: optionally install these packages
 # Languages & Tools
-# "nodejs"
-# "yarn"
 # "dotnetcore-sdk"
-# "python"
-# "sql-server-management-studio"
 # docker-desktop
-    
-# Gaming
-# CHOCO_PACKAGES += discord steam leagueoflegends
 
 windows: link windows-install
 
 windows-install:
 	gsudo choco upgrade $(CHOCO_PACKAGES) --yes --limit-output 
 
+windows-gaming:
+	gsudo choco upgrade discord steam leagueoflegends --yes --limit-output
+
+windows-rust:
+	gsudo choco upgrade rust --yes --limit-output
+	rustup install stable
 
 ###############################################################################
 # Debugging                                                                   #
