@@ -18,3 +18,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Ignore eslint errors when using CRA
 export ESLINT_NO_DEV_ERRORS='true'
+
+# TODO: only do this on mac os, for secretive
+export SSH_AUTH_SOCK=/Users/maxence/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
