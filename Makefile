@@ -1,12 +1,12 @@
 REPO := $(HOME)/dotfiles
 
 ###############################################################################
-# Linking                                                                     #
+# Shared                                                                      #
 ###############################################################################
 CONFIG_FILES     := $(shell ls -A $(REPO)/config)
 CONFIG_FILE_DEST := $(addprefix $(HOME)/,$(CONFIG_FILES))
 
-.PHONY: link unlink
+.PHONY: link unlink oh-my-zsh
 .SILENT: $(CONFIG_FILE_DEST)
 
 link: $(CONFIG_FILE_DEST)
@@ -20,11 +20,16 @@ unlink:
 	@echo "Unlinking dotfiles"
 	@for f in $(CONFIG_FILE_DEST); do if [ -h $$f ]; then rm -v $$f; fi ; done
 
+oh-my-zsh:
+	if ! [ -d "$$ZSH" ]; then \
+		sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended; \
+		sudo chsh -s $$(which zsh) maxence; \
+	fi
 
 ###############################################################################
 # Linux                                                                       #
 ###############################################################################
-.PHONY: linux linux-install linux-zsh linux-rust
+.PHONY: linux linux-install linux-rust
 .SILENT: linux-zsh
 
 APT_PACKAGES := build-essential cloc figlet git zsh fzf
@@ -38,18 +43,31 @@ linux-install:
 	sudo apt autoclean --yes
 	sudo apt autoremove --yes
 
-linux-zsh:
-	if ! [ -d "$$ZSH" ]; then \
-		sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended; \
-		sudo chsh -s $$(which zsh) maxence; \
-	fi
-
 linux-rust:
 	curl https://sh.rustup.rs -sSf | sh -s -- -y
 	export PATH="$$PATH:$$HOME/.cargo/bin"
 
 	rustup install stable
 	rustup install nightly
+
+###############################################################################
+# Mac Os                                                                      #
+###############################################################################
+.PHONY: macos macos-install
+
+BREW_FORMULAE := cloc figlet fzf git zsh
+BREW_FORMULAE += lastpass-cli
+BREW_FORMULAE += pyenv poetry
+
+BREW_CASKS := raycast itsycal warp iina
+
+macos: macos-install oh-my-zsh link
+
+macos-install:
+	brew update
+	brew upgrade
+	brew install --formulae $(BREW_FORMULAE)
+	brew install --casks $(BREW_CASKS)
 
 ###############################################################################
 # Windows                                                                     #
