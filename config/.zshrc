@@ -23,3 +23,6 @@ export SSH_AUTH_SOCK=/Users/maxence/Library/Containers/com.maxgoedjen.Secretive.
 
 # Add custom scripts to PATH
 export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dandelionhealth.ai/My Drive/scripts"
+
+# Add poetry to path
+export PATH="/Users/maxence/.local/bin:$PATH"

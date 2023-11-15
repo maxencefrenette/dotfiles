@@ -53,7 +53,7 @@ linux-rust:
 ###############################################################################
 # Mac Os                                                                      #
 ###############################################################################
-.PHONY: macos macos-install
+.PHONY: macos macos-install macos-poetry
 
 BREW_FORMULAE := cloc figlet fzf git zsh
 BREW_FORMULAE += lastpass-cli
@@ -68,6 +68,9 @@ macos-install:
 	brew upgrade
 	brew install --formulae $(BREW_FORMULAE)
 	brew install --casks $(BREW_CASKS)
+
+macos-poetry:
+	curl -sSL https://install.python-poetry.org | python3 -
 
 ###############################################################################
 # Windows                                                                     #
