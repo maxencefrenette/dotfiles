@@ -77,7 +77,7 @@ windows-gaming:
 	gsudo choco upgrade discord steam leagueoflegends --yes --limit-output
 
 windows-rust:
-	gsudo choco upgrade rust --yes --limit-output
+	gsudo choco upgrade rustup.install --yes --limit-output
 	rustup install stable
 
 ###############################################################################
