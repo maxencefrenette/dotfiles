@@ -97,8 +97,9 @@ windows-install:
 windows-gaming:
 	gsudo choco upgrade discord steam leagueoflegends --yes --limit-output
 
+# This needs to be run multiple times with a reboot after the VS install and a terminal restart after the rustup install
 windows-rust:
-	gsudo choco install visualstudio2022buildtools --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US"
+	gsudo choco install visualstudio2022buildtools --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US" --yes --limit-output
 	gsudo choco upgrade rustup.install --yes --limit-output
 	rustup install stable
 
