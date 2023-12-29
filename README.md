@@ -17,14 +17,13 @@ I have dotfiles for both windows and linux. View the appropriate directory for d
 
   ```bash
   ssh-keygen
-  cat .ssh/id_rsa.pub | clip.exe
+  cat .ssh/id_rsa.pub | pbcopy
   ```
 
 - Paste public key in github
 - Install Xcode (to get git and make)
 - Clone repo
-- `make link`
-- TODO: install brew and brew packages
+- `make macos`
 
 ### Linux
 

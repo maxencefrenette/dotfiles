@@ -59,7 +59,7 @@ BREW_FORMULAE := cloc figlet fzf git zsh
 BREW_FORMULAE += lastpass-cli
 BREW_FORMULAE += pyenv poetry
 
-BREW_CASKS := raycast itsycal warp iina google-drive
+BREW_CASKS := raycast itsycal warp iina google-drive visual-studio-code
 
 macos: macos-install oh-my-zsh link
 
