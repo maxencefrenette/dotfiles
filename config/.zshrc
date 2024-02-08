@@ -22,7 +22,7 @@ export ESLINT_NO_DEV_ERRORS='true'
 export SSH_AUTH_SOCK=/Users/maxence/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
 
 # Add custom scripts to PATH
-export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dandelionhealth.ai/My Drive/scripts"
+export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dandelionhealth.ai/My Drive/scripts/bin"
 
 # Add poetry to path
 export PATH="/Users/maxence/.local/bin:$PATH"
