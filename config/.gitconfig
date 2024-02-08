@@ -4,8 +4,6 @@
 # Personal Email
 [includeIf "gitdir:~/Repos/"]
 	path = .personal-email.gitconfig
-[includeIf "gitdir:~/repos/"]
-	path = .personal-email.gitconfig
 [includeIf "gitdir:~/dotfiles/"]
 	path = .personal-email.gitconfig
 

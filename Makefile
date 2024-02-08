@@ -53,17 +53,25 @@ linux-rust:
 ###############################################################################
 # Mac Os                                                                      #
 ###############################################################################
-.PHONY: macos macos-install macos-poetry
+.PHONY: macos macos-brew macos-install macos-poetry macos-rust
 
 BREW_FORMULAE := cloc figlet fzf git zsh
 BREW_FORMULAE += lastpass-cli
 BREW_FORMULAE += pyenv poetry
+BREW_FORMULAE += node
 
-BREW_CASKS := raycast itsycal warp iina google-drive
+BREW_CASKS := raycast itsycal warp iina google-drive visual-studio-code arc
 
 macos: macos-install oh-my-zsh link
 
-macos-install:
+# Check if homebrew is installed
+# If not, install it
+macos-brew:
+	if ! [ -x "$$(command -v brew)" ]; then \
+		/bin/bash -c "$$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; \
+	fi
+
+macos-install: macos-brew
 	brew update
 	brew upgrade
 	brew install --formulae $(BREW_FORMULAE)
@@ -71,6 +79,10 @@ macos-install:
 
 macos-poetry:
 	curl -sSL https://install.python-poetry.org | python3 -
+
+macos-rust: macos-brew
+	brew install rustup-init
+	rustup install stable
 
 ###############################################################################
 # Windows                                                                     #
@@ -97,8 +109,10 @@ windows-install:
 windows-gaming:
 	gsudo choco upgrade discord steam leagueoflegends --yes --limit-output
 
+# This needs to be run multiple times with a reboot after the VS install and a terminal restart after the rustup install
 windows-rust:
-	gsudo choco upgrade rust --yes --limit-output
+	gsudo choco install visualstudio2022buildtools --package-parameters "--allWorkloads --includeRecommended --includeOptional --passive --locale en-US" --yes --limit-output
+	gsudo choco upgrade rustup.install --yes --limit-output
 	rustup install stable
 
 ###############################################################################
