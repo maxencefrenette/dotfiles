@@ -19,5 +19,9 @@
 	cam = commit -am
 	st = status
 	br = branch
+	sw = switch
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	pushb = push -u origin HEAD
+
+[push]
+	autoSetupRemote = true
