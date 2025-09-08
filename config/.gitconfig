@@ -24,4 +24,5 @@
 	pushb = push -u origin HEAD
 
 [push]
+	default = current
 	autoSetupRemote = true
