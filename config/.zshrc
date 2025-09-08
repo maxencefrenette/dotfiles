@@ -26,3 +26,16 @@ export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dande
 
 # Add poetry to path
 export PATH="/Users/maxence/.local/bin:$PATH"
+
+# bun completions
+[ -s "/Users/maxence/.bun/_bun" ] && source "/Users/maxence/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+alias claude="/Users/maxence/.claude/local/claude"
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
