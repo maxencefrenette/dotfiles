@@ -36,6 +36,4 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 alias claude="/Users/maxence/.claude/local/claude"
 
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init - zsh)"
+eval "$(mise activate zsh)"
