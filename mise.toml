@@ -5,6 +5,8 @@ DOTFILES_REPO = "{{ env.HOME }}/dotfiles"
 node = "latest"
 bun = "latest"
 python = "latest"
+poetry = "latest"
+uv = "latest"
 rust="latest"
 
 [tasks."dotfiles:link-mise"]
