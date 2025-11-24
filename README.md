@@ -21,7 +21,8 @@ I have dotfiles for both windows and linux. View the appropriate directory for d
   ```
 
 - Paste public key in github
-- Install Xcode (to get git and make)
+- Install Xcode from the app store (to get git and make)
+- `curl https://mise.run | sh`
 - Clone repo
 - `make macos`
 
