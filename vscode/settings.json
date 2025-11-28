@@ -1,0 +1,233 @@
+{
+    // #region VS Code Settings
+    "debug.allowBreakpointsEverywhere": true,
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+
+    "editor.fontFamily": "hack, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.hover.delay": 200,
+    "editor.rulers": [140],
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.wordWrapColumn": 140,
+    "editor.wordWrap": "off",
+
+    "emmet.includeLanguages": {
+        "typescriptreact": "jsx"
+    },
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "diffEditor.renderSideBySide": true,
+
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    "files.exclude": {
+        ".conductor": true,
+        "**/__pycache__": true,
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.husky": true,
+        "**/.idea": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.svn": true,
+        "**/*.egg-info": true,
+        "**/coverage/**/*": true,
+        "**/CVS": true,
+        "**/node_modules": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    "git.autofetch": true,
+    "git.confirmSync": false,
+
+    // "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    // "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "terminal.integrated.autoReplies": {
+        "Terminate batch job (Y/N)?": "Y\r"
+    },
+
+    "window.titleBarStyle": "custom",
+
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Default Dark Modern",
+    // #endregion
+
+    // #region Webdev
+    // Eslint
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+
+    // Javascript
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    // Prettier
+    "prettier.arrowParens": "always",
+    "prettier.singleQuote": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 120,
+
+    // Typescript
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    // #endregion
+
+    // Go
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true
+    },
+
+    // LaTeX
+    "latex-workshop.view.pdf.viewer": "tab",
+    "[latex]": {
+        "editor.wordWrap": "bounded",
+        "editor.wordWrapColumn": 120,
+        "editor.rulers": [120]
+    },
+
+    // Markdown
+    "[markdown]": {
+        "editor.wordWrapColumn": 100,
+        "editor.rulers": [100],
+        "editor.wordWrap": "bounded"
+    },
+    "[mdx]": {
+        "editor.wordWrapColumn": 100,
+        "editor.rulers": [100],
+        "editor.wordWrap": "bounded"
+    },
+
+    // Pastery
+    "vscode-pastery.api-key": "N4N3zbJjW8g8hSrEXp3DL9unNiJ8QQXy",
+
+    // Rust
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
+
+    // VS Intellicode
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // Python
+    "python.languageServer": "Default",
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+
+    // Yaml
+    "yaml.format.proseWrap": "always",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": false
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
+    // Other
+    "[zig]": {
+        "editor.defaultFormatter": "tiehuis.zig"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+
+    "remote.SSH.remotePlatform": {
+        "minecraft-server": "linux",
+        "35.238.132.33": "linux"
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "files.watcherExclude": {
+        "gniller.min.js": true
+    },
+    "xml.server.binary.trustedHashes": ["34f51b1d8c3b85bf8af72502c3a52ca841d11cf76f848be198631e0dd2b7e169"],
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.accessibilitySupport": "off",
+    "notebook.output.textLineLimit": 50,
+    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+    "jupyter.askForKernelRestart": false,
+    "notebook.lineNumbers": "on",
+    "git.openRepositoryInParentFolders": "always",
+    "jupyter.interactiveWindow.textEditor.executeSelection": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "yaml.schemas": {
+        "file:///Users/maxence/.cursor/extensions/atlassian.atlascode-4.0.11-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "zig.path": "zig",
+    "zig.zls.path": "/Users/maxence/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+    "python.terminal.activateEnvironment": false,
+    "terminal.integrated.stickyScroll.enabled": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "[dockercompose]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        },
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "[github-actions-workflow]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "azureTerraform.survey": {
+        "surveyPromptDate": "2025-11-27T20:06:29.725Z",
+        "surveyPromptIgnoredCount": 0
+    },
+    "azureTerraform.languageServer": {
+        "external": false,
+        "pathToBinary": "",
+        "args": ["serve"],
+        "trace.server": "off"
+    },
+    "terminal.integrated.env.osx": {
+        "EDITOR": "code -w"
+    }
+}
