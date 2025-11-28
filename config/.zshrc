@@ -4,7 +4,7 @@ ZSH_THEME="fishy"
 HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git)
+plugins=(git mise)
 
 source $ZSH/oh-my-zsh.sh
 
