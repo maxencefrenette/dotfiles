@@ -9,30 +9,5 @@ poetry = "latest"
 uv = "latest"
 rust="latest"
 
-[tasks."dotfiles:link-mise"]
-run = """
-mkdir -p {{ env.HOME }}/.config/mise/conf.d/
-rm -fv {{ env.HOME }}/.config/mise/conf.d/dotfiles.toml
-ln -sv {{ env.DOTFILES_REPO }}/mise.toml {{ env.HOME }}/.config/mise/conf.d/dotfiles.toml
-"""
-
-[tasks."dotfiles:link"]
-run = """
-#!/usr/bin/env bun
-
-import { $ } from "bun";
-import { readdir } from "node:fs/promises";
-import path from "node:path";
-
-const files = await readdir(`${process.env.DOTFILES_REPO}/config`);
-for (const file of files) {
-  const src = path.join(process.env.DOTFILES_REPO, "config", file);
-  const dest = path.join(process.env.HOME, file);
-
-  await $`rm -fv ${dest}`;
-  await $`ln -sv ${src} ${dest}`;
-}
-"""
-
 [tasks.dotfiles]
 depends = ["dotfiles:link", "dotfiles:link-mise"]
