@@ -13,5 +13,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["mise-tasks/**/*.ts"]
+  "include": ["mise-tasks/**/*.ts", "types/**/*.d.ts"]
 }
