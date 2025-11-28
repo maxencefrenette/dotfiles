@@ -10,4 +10,4 @@ uv = "latest"
 rust="latest"
 
 [tasks.dotfiles]
-depends = ["dotfiles:link", "dotfiles:link-mise"]
+depends = ["dotfiles:link-config", "dotfiles:link-mise", "dotfiles:link-vsc"]
