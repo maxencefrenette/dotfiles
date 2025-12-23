@@ -192,7 +192,7 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "yaml.schemas": {
-        "file:///Users/maxence/.cursor/extensions/atlassian.atlascode-4.0.11-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/maxence/.cursor/extensions/atlassian.atlascode-4.0.13-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -229,5 +229,7 @@
     },
     "terminal.integrated.env.osx": {
         "EDITOR": "code -w"
-    }
+    },
+    "python.defaultInterpreterPath": "~/.local/share/mise/installs/python/3.14.0/bin/python",
+    "atlascode.rovodev.showEntitlementNotifications": false
 }
