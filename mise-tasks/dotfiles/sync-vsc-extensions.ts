@@ -16,6 +16,8 @@ const ignored_extensions = {
         'github.copilot-chat',
         'ms-azuretools.vscode-azureterraform',
         'ms-toolsai.datawrangler',
+        'ms-vscode.cpptools',
+        'ms-vscode.cpptools-extension-pack',
     ]),
 };
 

@@ -2,6 +2,7 @@ adpyke.vscode-sql-formatter
 alefragnani.bookmarks
 anthropic.claude-code
 atlassian.atlascode
+be5invis.toml
 boukichi.git-exclude
 bradlc.vscode-tailwindcss
 charliermarsh.ruff
@@ -63,6 +64,7 @@ redhat.vscode-yaml
 rust-lang.rust-analyzer
 sidneys1.gitconfig
 slevesque.shader
+stkb.rewrap
 sydeslyde.open-in-new-instance
 tamasfe.even-better-toml
 tauri-apps.tauri-vscode

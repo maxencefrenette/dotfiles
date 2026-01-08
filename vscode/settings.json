@@ -192,7 +192,7 @@
     "rust-analyzer.inlayHints.typeHints.enable": false,
     "rust-analyzer.inlayHints.parameterHints.enable": false,
     "yaml.schemas": {
-        "file:///Users/maxence/.cursor/extensions/atlassian.atlascode-4.0.13-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        "file:///Users/maxence/.cursor/extensions/atlassian.atlascode-4.0.14-universal/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
     },
     "redhat.telemetry.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
