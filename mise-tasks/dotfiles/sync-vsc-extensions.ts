@@ -8,9 +8,9 @@ const os = require('os');
 
 const env = process.env;
 
-const ignored_extensions = {
-    code: new Set([]),
-    cursor: new Set([
+// These extensions don't get get written to the shared list file and thuis never get installed by this script
+const platform_specific_extensions = {
+    code: new Set([
         'github.codespaces',
         'github.copilot',
         'github.copilot-chat',
@@ -19,6 +19,7 @@ const ignored_extensions = {
         'ms-vscode.cpptools',
         'ms-vscode.cpptools-extension-pack',
     ]),
+    cursor: new Set(['anysphere.cursorpyright', 'anysphere.pyright', 'anysphere.remote-wsl']),
 };
 
 function main() {
@@ -53,11 +54,11 @@ function sync_editor(command: 'code' | 'cursor', list_file_path: string) {
     switch (sync_direction) {
         case 'push-to-list':
             console.log(`   → Extensions are newer, pushing to list file...`);
-            push_to_extensions_list(command_path, list_file_path);
+            push_to_extensions_list(command_path, list_file_path, platform_specific_extensions[command]);
             break;
         case 'pull-from-list':
             console.log(`   → List file is newer, pulling from list...`);
-            pull_from_extensions_list(command_path, list_file_path, ignored_extensions[command]);
+            pull_from_extensions_list(command_path, list_file_path);
             break;
     }
 }
@@ -85,8 +86,14 @@ function determine_sync_direction(editor: string, list_file_path: string): 'pull
  * @param command_path - Full path to editor CLI command
  * @param list_file_path - Full path to the list.txt file
  */
-function push_to_extensions_list(command_path: string, list_file_path: string) {
-    const installed_extensions = get_installed_extensions(command_path);
+function push_to_extensions_list(
+    command_path: string,
+    list_file_path: string,
+    platform_specific_extensions: Set<string>
+) {
+    const installed_extensions = get_installed_extensions(command_path).filter(
+        (ext) => !platform_specific_extensions.has(ext)
+    );
     write_list(list_file_path, installed_extensions);
 }
 
@@ -95,14 +102,16 @@ function push_to_extensions_list(command_path: string, list_file_path: string) {
  * @param command_path - Full path to editor CLI command
  * @param list_file_path - Full path to the list.txt file
  */
-function pull_from_extensions_list(command_path: string, list_file_path: string, ignored_extensions: Set<string>) {
+function pull_from_extensions_list(
+    command_path: string,
+    list_file_path: string,
+    platform_specific_extensions: Set<string>
+) {
     // Read desired extensions from file
     const desired_extensions = new Set(read_list(list_file_path));
     const installed_extensions = new Set(get_installed_extensions(command_path));
 
-    const to_install = [...desired_extensions].filter(
-        (ext) => !installed_extensions.has(ext) && !ignored_extensions.has(ext)
-    );
+    const to_install = [...desired_extensions];
     const to_uninstall = [...installed_extensions].filter((ext) => !desired_extensions.has(ext));
 
     install_extensions(command_path, to_install);
@@ -161,7 +170,7 @@ function uninstall_extensions(command_path: string, extensions: string[]) {
     if (extensions.length === 0) {
         return;
     }
-    execSync(`${command_path} ${extensions.map((ext) => `--uninstall_extension ${ext}`).join(' ')}`, {
+    execSync(`${command_path} ${extensions.map((ext) => `--uninstall-extension ${ext}`).join(' ')}`, {
         stdio: 'inherit',
     });
 }
