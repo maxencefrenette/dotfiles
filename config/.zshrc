@@ -28,5 +28,7 @@ export PATH="/Users/maxence/.local/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-
 eval "$(mise activate zsh)"
+
+# Temp fix for claude code https://github.com/anthropics/claude-code/issues/21654
+export CLAUDE_CODE_TMPDIR=/tmp/claude
