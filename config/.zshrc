@@ -28,6 +28,5 @@ export PATH="/Users/maxence/.local/bin:$PATH"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias claude="/Users/maxence/.claude/local/claude"
 
 eval "$(mise activate zsh)"
