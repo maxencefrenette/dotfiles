@@ -17,6 +17,7 @@ export SSH_AUTH_SOCK=/Users/maxence/Library/Containers/com.maxgoedjen.Secretive.
 
 # Add custom scripts to PATH
 export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dandelionhealth.ai/My Drive/scripts/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
 # bun completions
 [ -s "/Users/maxence/.bun/_bun" ] && source "/Users/maxence/.bun/_bun"
