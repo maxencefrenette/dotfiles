@@ -2,7 +2,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="fishy"
 HYPHEN_INSENSITIVE="true"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 CORRECT_IGNORE_FILE="test|tests|test."
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git mise)
