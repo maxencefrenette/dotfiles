@@ -15,4 +15,4 @@ export EDITOR='vim'
 # Add custom scripts to PATH
 export PATH="$PATH:/Users/maxence/Library/CloudStorage/GoogleDrive-maxence@dandelionhealth.ai/My Drive/scripts/bin"
 
-eval "$(mise activate zsh)"
+eval "$(mise activate zsh --shims)"
