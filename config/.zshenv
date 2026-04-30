@@ -8,3 +8,7 @@ export PATH
 # aws-vault on macOS: use Keychain with Touch ID
 export AWS_VAULT_BACKEND=keychain
 export AWS_VAULT_BIOMETRICS=1
+
+export MISE_TRUSTED_CONFIG_PATHS=(
+  $HOME/.codex/worktrees/
+)
