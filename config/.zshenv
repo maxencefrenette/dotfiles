@@ -9,6 +9,4 @@ export PATH
 export AWS_VAULT_BACKEND=keychain
 export AWS_VAULT_BIOMETRICS=1
 
-export MISE_TRUSTED_CONFIG_PATHS=(
-  $HOME/.codex/worktrees/
-)
+export MISE_TRUSTED_CONFIG_PATHS=$HOME/.codex/worktrees
